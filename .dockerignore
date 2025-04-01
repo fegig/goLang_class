@@ -1,0 +1,8 @@
+.git
+.gitignore
+README.md
+.env
+*.md
+tmp/
+vendor/
+*.log 
