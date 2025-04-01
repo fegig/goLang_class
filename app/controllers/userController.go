@@ -3,9 +3,9 @@ package controllers
 import (
 	"net/http"
 
-	"github.com/fegig/goLang_class/app/services"
-	"github.com/fegig/goLang_class/database"
-	"github.com/fegig/goLang_class/functions"
+	"web-service/app/services"
+	"web-service/database"
+	"web-service/functions"
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"

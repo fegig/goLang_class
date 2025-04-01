@@ -1,8 +1,8 @@
 package main
 
 import (
-	user "github.com/fegig/goLang_class/app/controllers"
-	middleware "github.com/fegig/goLang_class/app/middlewares"
+	user "web-service/app/controllers"
+	middleware "web-service/app/middlewares"
 
 	"github.com/gin-gonic/gin"
 )
@@ -17,5 +17,5 @@ func main() {
 	router.GET("/users", user.GetUsers)
 	router.GET("/user/:userID", user.GetUser)
 	router.PUT("/update/:userID", user.UpdateUser)
-	router.Run("localhost:8080")
+	router.Run("0.0.0.0:8080")
 }
