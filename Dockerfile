@@ -1,30 +1,21 @@
 # Build stage
-FROM golang:1.24.1 AS builder
+FROM golang:latest
 
-WORKDIR /app
+RUN mkdir /build
 
-# Copy go mod and sum files
-COPY go.mod go.sum ./
+WORKDIR /build
 
-# Download dependencies
-RUN go mod download
+RUN export GO111MODULE=on
 
-# Copy source code
-COPY . .
+# Clone the repository
+RUN go install github.com/fegig/goLang_class@latest
+RUN cd /build/ && git clone https://github.com/fegig/goLang_class.git
 
-# Build the application
-RUN CGO_ENABLED=0 GOOS=linux go build -o main .
-
-# Final stage
-FROM alpine:latest
-
-WORKDIR /app
-
-# Copy the binary from builder
-COPY --from=builder /app/main .
+# Change directory to the cloned repository
+RUN cd /build/goLang_class && go build
 
 # Expose port 8080
 EXPOSE 8080
 
 # Run the application
-CMD ["./main"] 
+ENTRYPOINT ["./build/goLang_class/main"] 

@@ -4,3 +4,10 @@
 .env.test.local
 .env.production.local
 
+.dockerignore
+.gitignore
+Dockerfile
+go.mod
+go.sum
+
+

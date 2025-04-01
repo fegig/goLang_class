@@ -1,4 +1,4 @@
-module web-service
+module github.com/fegig/goLang_class
 
 go 1.24.1
 

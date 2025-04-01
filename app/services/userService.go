@@ -1,7 +1,7 @@
 package services
 
 import (
-	sql "web-service/database"
+	sql "github.com/fegig/goLang_class/database"
 )
 
 type UserData struct {

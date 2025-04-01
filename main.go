@@ -1,8 +1,8 @@
 package main
 
 import (
-	user "web-service/app/controllers"
-	middleware "web-service/app/middlewares"
+	user "github.com/fegig/goLang_class/app/controllers"
+	middleware "github.com/fegig/goLang_class/app/middlewares"
 
 	"github.com/gin-gonic/gin"
 )
